@@ -4,12 +4,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap w/ Vite</title>
+    <link rel="stylesheet" href="./css/style.css">
   </head>
-  <body>
-    <div class="container py-4 px-3 mx-auto">
-      <h1>Hello, Bootstrap and Vite!</h1>
-      <button class="btn btn-primary">Primary button</button>
-    </div>
+  <body> 
+    <div class="main-container d-flex">
+      <div class="sidebar bg-dark min-w-250 mw-250" id="side_nav">
+         <div class="header-box px-3 pt-3">
+          <h1 class="fs-4"><span class="bg-white text-dark rounded shadow">Pr</span><span class="text-white">estamos</span></h1>
+          <button class="btn d-md-none d-block close-btn px-1 py-0 text-white"><i class="bi bi-list"></i></button>
+         </div>
+
+         <ul class="list-unstyled px-2">
+          <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block text-white"><i class="bi bi-house"></i>Dashboard</a></li>
+          <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block text-white"><i class="bi bi-bank"></i>Prestamos</a></li>
+          <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block text-white"><i class="bi bi-coin"></i>Pagos</a></li>
+          <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block text-white"><i class="bi bi-people"></i>Clientes</a></li>
+          <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block text-white"><i class="bi bi-file-earmark-text"></i>Reportes</a></li>
+         </ul>
+         <hr class="text-white mx-2">
+         <ul class="list-unstyled px-2">
+            <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block text-white"><i class="bi bi-gear"></i>Configuracion</a></li>
+         </ul>
+      </div>
+      <div class="content min-vh-100 w-250"></div>
+    </div> 
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>
