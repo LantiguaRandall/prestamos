@@ -1,33 +1,175 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap w/ Vite</title>
-    <link rel="stylesheet" href="./css/style.css">
-  </head>
-  <body> 
-    <div class="main-container d-flex">
-      <div class="sidebar bg-dark min-w-250 mw-250" id="side_nav">
-         <div class="header-box px-3 pt-3">
-          <h1 class="fs-4"><span class="bg-white text-dark rounded shadow">Pr</span><span class="text-white">estamos</span></h1>
-          <button class="btn d-md-none d-block close-btn px-1 py-0 text-white"><i class="bi bi-list"></i></button>
-         </div>
 
-         <ul class="list-unstyled px-2">
-          <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block text-white"><i class="bi bi-house"></i>Dashboard</a></li>
-          <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block text-white"><i class="bi bi-bank"></i>Prestamos</a></li>
-          <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block text-white"><i class="bi bi-coin"></i>Pagos</a></li>
-          <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block text-white"><i class="bi bi-people"></i>Clientes</a></li>
-          <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block text-white"><i class="bi bi-file-earmark-text"></i>Reportes</a></li>
-         </ul>
-         <hr class="text-white mx-2">
-         <ul class="list-unstyled px-2">
-            <li class=""><a href="#" class="text-decoration-none px-3 py-2 d-block text-white"><i class="bi bi-gear"></i>Configuracion</a></li>
-         </ul>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap w/ Vite</title>
+  <link rel="stylesheet" href="./css/sidebar.css">
+</head>
+
+<body>
+  <div class="d-flex flex-nowrap">
+    <!-- Sidebar -->
+    <div class="d-flex flex-column flex-shrink-0 p-3 bg-light shadow" style="width: 280px;">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+        <svg class="bi pe-none me-2" width="40" height="32"><img src="./img/logo.png" width="48" alt=""></svg>
+        <span class="fs-4">Prestamos</span>
+      </a>
+      <hr>
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+          <a href="Dashboard.html" class="nav-link active " aria-current="page">
+            <svg class="bi pe-none me-2" width="16" height="16"><i class="bi bi-house"></i></svg>
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="prestamos.html" class="nav-link text-dark">
+            <svg class="bi pe-none me-2" width="16" height="16"><i class="bi bi-bank"></i></svg>
+            Prestamos
+          </a>
+        </li>
+        <li>
+          <a href="pagos.html" class="nav-link link-dark">
+            <svg class="bi pe-none me-2" width="16" height="16"><i class="bi bi-coin"></i></svg>
+            Pagos
+          </a>
+        </li>
+        <li>
+          <a href="clientes.html" class="nav-link link-dark">
+            <svg class="bi pe-none me-2" width="16" height="16"><i class="bi bi-people"></i></svg>
+            Clientes
+          </a>
+        </li>
+        <li>
+          <a href="reportes.html" class="nav-link link-dark">
+            <svg class="bi pe-none me-2" width="16" height="16"><i class="bi bi-file-earmark-text"></i></svg>
+            Reportes
+          </a>
+        </li>
+      </ul>
+      <hr>
+      <div class="dropdown">
+        <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="https://i.pinimg.com/564x/8f/b1/4e/8fb14e64130f949b48d22d8809ad7d49.jpg" alt=""
+            class="rounded-circle me-2" width="32" height="32">
+          <strong>Randall</strong>
+        </a>
+        <ul class="dropdown-menu text-small shadow">
+          <li><a class="dropdown-item" href="#">Settings</a></li>
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" href="#">Sign out</a></li>
+        </ul>
       </div>
-      <div class="content min-vh-100 w-250"></div>
-    </div> 
-    <script type="module" src="./js/main.js"></script>
-  </body>
+    </div>
+    <!-- contenedor de mier... -->
+    <div class="container m-4">
+
+      <div class="container  bg-white rounded shadow">
+        <div class="row aling-items-stretch">
+          <div class="bg-white p-3 rounded-end">
+            <div class="text-end">
+              <img src="img/logo.png" width="48" alt="">
+            </div>
+            <h2 class="fw-blod text-center py-3">Dashboard</h2>
+            <!-- Form -->
+            <div class="main_layout_reverse">
+
+              <div class="loans_calculator_container negative_top_margin bottom_left_border_radius">
+                <div class="amortization_table_container negative_top_margin">
+                  <div class="amortization_table_title">Tabla de amortización</div>
+                  <div class="amortization_table">
+                    <table>
+                      <tbody>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="info_calculator_container bottom_left_border_radius">
+                  <div class="info_calculator_box">
+                    <div class="calculator_container">
+                      <div class="loans_calculator card colorWhite withBoxShadow">
+                        <div class="input_calculator_container">
+                          <div class="input_container">
+                            <span class="error field-validation-error">Campo requerido</span>
+                            <input id="amountLoan" name="amountLoan" inputmode="number" placeholder="Monto"
+                              type="number">
+                            <div class="border"></div>
+                            <label class="label_text">Monto</label>
+                          </div>
+                        </div>
+                        <div class="input_calculator_container">
+                          <div class="input_container">
+                            <span class="error field-validation-error">Campo requerido</span>
+                            <input id="loansPayments" name="loansPayments" inputmode="number" placeholder="Cuotas"
+                              type="number">
+                            <div class="border"></div>
+                            <label class="label_text">Cuotas</label>
+                          </div>
+                        </div>
+                        <div class="input_calculator_container">
+                          <div class="input_container">
+                            <span class="error field-validation-error">Campo requerido</span>
+                            <input id="yearInterest" name="yearInterest" inputmode="number" placeholder="Interés anual"
+                              type="number">
+                            <div class="border"></div>
+                            <label class="label_text">Interés anual</label>
+                          </div>
+                        </div>
+                        <div class="result_container">
+                          <h1>Resultado:</h1>
+                          <label class="result_message"></label>
+                        </div>
+                        <div class="link_to_table_container">
+                          <a href="javascript:void(0)" onclick="goToAmortizationTable(event)"
+                            class="link_to_table_message">Ver tabla de amortización</a>
+                        </div>
+                        <button onclick="calculateLoans()" id="calculate_button">
+                          Calcular
+                        </button>
+                      </div>
+                    </div>
+                    <div class="info_container using_richtext_editor">
+                      <p><strong>Notas:</strong></p>
+                      <ul>
+                        <li>Los resultados de esta simulación son aproximados.</li>
+                        <li>Se consideran meses de 30 días y años de 360 días.</li>
+                        <li>No se contempló período de gracia y el primer vencimiento es a 30 días.</li>
+                        <li>En caso de préstamos hipotecarios, la cuota mensual aumentaría producto del seguro de vida y
+                          de propiedad, no incluidos en el cálculo.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="introduction_section   negative_top_margin bottom_left_border_radius">
+                <div class="introduction_title_container">Cuota de préstamo</div>
+                <div class="introduction_description_container using_richtext_editor">
+                  <p><span class="co_RTE_st_fs_desk_21 co_RTE_st_lh_1-5 co_RTE_st_color_white">Esta calculadora per­mite
+                      estable­cer el valor que va a tener la cuota de un crédito, tomando el monto a tomar prestado, la
+                      tasa de interés y el plazo.</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script type="module" src="./js/main.js"></script>
+  <script src="./js/sidebar.js"></script>
+  <script type="application/javascript" src="./js/loanscalculator.js"></script>
+</body>
+
 </html>
